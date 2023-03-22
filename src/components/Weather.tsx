@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 interface WeatherData {
   name: string;
-
   weather: {
     description: string;
   }[];
