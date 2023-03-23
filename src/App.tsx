@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // components
 import Weather from "./components/Weather";
 import Nav from "./components/Nav";
+import { Counter } from "./features/counter/Counter";
 
 //pages
 import Test1 from "./pages/Test1";
@@ -25,6 +26,7 @@ function App() {
           Learn React
         </a>
         <Weather></Weather>
+        <Counter></Counter>
         <Routes>
           <Route path="/" element={<Test1 />} />
           <Route path="/test2" element={<Test2 />} />
