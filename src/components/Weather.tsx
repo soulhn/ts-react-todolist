@@ -48,6 +48,7 @@ function Weather() {
       <WeatherBlock>
         <h1>날씨</h1>
         <span>날씨 : {weatherData.weather[0].description}</span>
+        <br></br>
         <span>지역 : {weatherData.name}</span>
       </WeatherBlock>
     </>
