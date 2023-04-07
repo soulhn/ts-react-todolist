@@ -102,9 +102,31 @@ function App() {
     }
   };
 
-  const toggleCompleted = (id: number) => {
-    const updatedTodos = todos.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo));
-    setTodos(updatedTodos);
+  const toggleCompleted = async (id: number) => {
+    const todoToToggle = todos.find((todo) => todo.id === id);
+    if (!todoToToggle) return;
+
+    const updatedTodoData = { ...todoToToggle, completed: !todoToToggle.completed };
+
+    try {
+      const response = await fetch(`http://localhost:3001/todos/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedTodoData),
+      });
+
+      if (response.ok) {
+        const updatedTodo = await response.json();
+        const updatedTodos = todos.map((todo) => (todo.id === id ? updatedTodo : todo));
+        setTodos(updatedTodos);
+      } else {
+        console.error("Error updating todo's completion status:", response.status);
+      }
+    } catch (error) {
+      console.error("Error updating todo's completion status:", error);
+    }
   };
 
   const handleEdit = async (id: number) => {
