@@ -9,6 +9,7 @@ interface WeatherData {
 }
 
 const WeatherBlock = styled.div`
+  border: 1px solid black;
   h1 {
     margin: 0;
     font-size: 36px;
@@ -41,12 +42,12 @@ function Weather() {
     );
   }, []);
 
-  if (!weatherData) return <div>Loading...</div>;
+  if (!weatherData) return <div>위치와 날씨를 받아 오는 중 입니다...</div>;
 
   return (
     <>
       <WeatherBlock>
-        <h1>날씨</h1>
+        <h1>오늘의 날씨</h1>
         <span>날씨 : {weatherData.weather[0].description}</span>
         <br></br>
         <span>지역 : {weatherData.name}</span>

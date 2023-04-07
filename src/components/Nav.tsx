@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #333;
+
+  background-color: #959da6;
   padding: 1rem;
 `;
 
@@ -20,7 +21,7 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(Link)`
-  color: white;
+  color: #2f3033;
   text-decoration: none;
   &:hover {
     color: #ccc;
@@ -32,13 +33,13 @@ function Nav() {
     <Navbar>
       <NavItems>
         <NavItem>
-          <NavLink to="/">Test 1</NavLink>
+          <NavLink to="/">TODO LIST</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/test2">Test 2</NavLink>
+          <NavLink to="/test2">CALENDAR</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/test3">Test 3</NavLink>
+          <NavLink to="/test3">MBTI TEST</NavLink>
         </NavItem>
       </NavItems>
     </Navbar>

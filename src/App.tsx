@@ -14,7 +14,6 @@ import Test2 from "./pages/Test2";
 import Test3 from "./pages/Test3";
 
 //other
-import logo from "./logo.svg";
 import "./App.css";
 
 //interface
@@ -178,20 +177,15 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
         <Weather></Weather>
         <TodoInput onAddTodo={addTodo}></TodoInput>
         {/* <Counter></Counter> */}
+        <TodoList todos={todos} onToggleCompleted={toggleCompleted} onEdit={handleEdit} onDelete={handleDelete} />
         <Routes>
           <Route path="/" element={<Test1 />} />
           <Route path="/test2" element={<Test2 />} />
           <Route path="/test3" element={<Test3 />} />
         </Routes>
-        <TodoList todos={todos} onToggleCompleted={toggleCompleted} onEdit={handleEdit} onDelete={handleDelete} />
       </header>
     </div>
   );
