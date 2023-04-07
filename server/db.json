@@ -8,12 +8,22 @@
     {
       "id": 2,
       "title": "잠 자기",
-      "completed": false
+      "completed": true
     },
     {
       "title": "음 잘 될거 같아요 ",
-      "completed": false,
+      "completed": true,
       "id": 5
+    },
+    {
+      "title": "만약에",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "이게",
+      "completed": false,
+      "id": 7
     }
   ]
 }
