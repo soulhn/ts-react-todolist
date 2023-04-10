@@ -1,29 +1,29 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "런닝하기 5km",
-      "completed": true
-    },
-    {
       "id": 2,
-      "title": "잠 자기",
+      "title": "Clean the house",
       "completed": true
-    },
-    {
-      "title": "음 잘 될거 같아요 ",
-      "completed": true,
-      "id": 5
     },
     {
       "title": "만약에",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
       "title": "이게",
-      "completed": false,
+      "completed": true,
       "id": 7
+    },
+    {
+      "title": "안녕하세요",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "title": "지원님 골통먹이기",
+      "completed": false,
+      "id": 9
     }
   ]
 }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import TodayDateAndTime from "./components/Today";
+// json-server --watch db.json --port 3001
 
 // components
 import Weather from "./components/Weather";
@@ -177,6 +179,7 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <header className="App-header">
+        <TodayDateAndTime></TodayDateAndTime>
         <Weather></Weather>
         <TodoInput onAddTodo={addTodo}></TodoInput>
         {/* <Counter></Counter> */}
